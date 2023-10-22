@@ -13,10 +13,36 @@
 Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 void setup()
 {
-	
+    strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
+    strip.show();            // Turn OFF all pixels ASAP
+    strip.setBrightness(50); // Set BRIGHTNESS to about 1/5 (max = 255)
+
+    pinMode(LED_IN, INPUT);
+
+    Serial.begin(9600);
 }
 
 void loop()
 {
-	
+    Serial.println(length());
+    break;
 }
+
+int length()
+{
+    for(int i=0; i<LED_COUNT; i++)
+    {
+        nextLed(i);
+        if(digitalRead(LED_IN == HIGH))
+        {
+            return(i-1);
+        }
+    }
+}
+
+void nextLed(i)
+{
+    strip.setPixelColor(i, strip.Color(100, 0, 150));
+    strip.show();
+}
+
