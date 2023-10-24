@@ -10,7 +10,7 @@
 #define LED_COUNT 500
 
 //Strip object setup:
-Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip(LED_COUNT, LED_OUT, NEO_GRB + NEO_KHZ800);
 void setup()
 {
     strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
@@ -25,7 +25,7 @@ void setup()
 void loop()
 {
     Serial.println(length());
-    break;
+    return;
 }
 
 int length()
@@ -36,11 +36,12 @@ int length()
         if(digitalRead(LED_IN == HIGH))
         {
             return(i-1);
+            Serial.print(i);
         }
     }
 }
 
-void nextLed(i)
+void nextLed(int i)
 {
     strip.setPixelColor(i, strip.Color(100, 0, 150));
     strip.show();
