@@ -1,6 +1,0 @@
-{
-    "sketch": "Neopixel-Length-Finder.ino",
-    "output": "build",
-    "board": "arduino:avr:uno",
-    "port": "/dev/ttyACM0"
-}
