@@ -5,13 +5,12 @@
 
 //Pin connected to neopixel data out
 const byte LED_IN = (int)3;
-volatile byte state = LOW;
 
-//Very large baloney value to make the code run (cause the whole point is that we dont know how big the strip is yet)
-#define LED_COUNT 9
+//Variable to keep track of how many times the interrupt has been triggered
+int state = 0;
 
 //Strip object setup:
-Adafruit_NeoPixel strip(LED_COUNT, LED_OUT, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip(500, LED_OUT, NEO_GRBW + NEO_KHZ800);
 void setup()
 {
     strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
@@ -28,34 +27,38 @@ void setup()
 
 void loop()
 {
-
 }
 
 void done() {
-    state = !state;
+    state++;
+    //Serial.print("state:");
+    //Serial.println(state);
 }
 
 //Light each consecutive LED until some data slips out the other end
 int length()
 {
-    for(int i=0; i<=LED_COUNT; i++)
+    for(int i=0; i<=300; i++)
     {
-        //light the next LED on the string
-        nextLed(i);
-        if(state == HIGH)
+        
+        if(state >= 3)
         {
-            Serial.println(i);
-            return(i+1);
+            //Serial.println(i);
+            return(i-1);
         }
-        Serial.println(i);
-        delay(100);
+        //Serial.println(i);
+        //light the next LED on the string
+        //Strip object setup:
+        strip.updateLength(i);
+        nextLed(i);
+        delay(10);
     }
 }
 
 //Light i LED
 void nextLed(int i)
 {
-    strip.setPixelColor(i, strip.Color(100, 0, 150));
+    strip.setPixelColor(i, strip.Color(25, 0, 0));
     strip.show();
 }
 
