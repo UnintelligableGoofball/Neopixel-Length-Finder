@@ -4,6 +4,7 @@
 #define LED_OUT 6
 
 //Pin connected to neopixel data out
+//must be an interrupt pin
 const byte LED_IN = (int)3;
 
 //Variable to keep track of how many times the interrupt has been triggered
