@@ -8,3 +8,7 @@ Forseen issues:
  I doubt it functions at all as it has been ages since I've written arduino code and I currently have access to neither an arduino or neopixel strip. I think the idea shows promise, but I'm guessing the digitalread is going to happen after the strip sends down the data so it'll probably miss the data that gets through to it, I'll probably have to move it to an interrupt pin.
 
 I might continue fiddling with this later if i have time
+
+Update: doesnt work
+Stops at 2 every time
+gonna try simple neopixel's and see it that works (?) (https://github.com/bigjosh/SimpleNeoPixelDemo/tree/master)

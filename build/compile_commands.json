@@ -52,11 +52,11 @@
    "-I/home/blues/.arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
    "-I/home/blues/.arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
    "-I/home/blues/Arduino/libraries/Adafruit_NeoPixel",
-   "/home/blues/Arduino/libraries/Adafruit_NeoPixel/esp8266.c",
+   "/home/blues/Arduino/libraries/Adafruit_NeoPixel/kendyte_k210.c",
    "-o",
-   "/home/blues/Documents/Code/Neopixel-Length-Finder/build/libraries/Adafruit_NeoPixel/esp8266.c.o"
+   "/home/blues/Documents/Code/Neopixel-Length-Finder/build/libraries/Adafruit_NeoPixel/kendyte_k210.c.o"
   ],
-  "file": "/home/blues/Arduino/libraries/Adafruit_NeoPixel/esp8266.c"
+  "file": "/home/blues/Arduino/libraries/Adafruit_NeoPixel/kendyte_k210.c"
  },
  {
   "directory": "/home/blues/Documents/Code/Neopixel-Length-Finder",
@@ -139,10 +139,10 @@
    "-I/home/blues/.arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
    "-I/home/blues/.arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
    "-I/home/blues/Arduino/libraries/Adafruit_NeoPixel",
-   "/home/blues/Arduino/libraries/Adafruit_NeoPixel/kendyte_k210.c",
+   "/home/blues/Arduino/libraries/Adafruit_NeoPixel/esp8266.c",
    "-o",
-   "/home/blues/Documents/Code/Neopixel-Length-Finder/build/libraries/Adafruit_NeoPixel/kendyte_k210.c.o"
+   "/home/blues/Documents/Code/Neopixel-Length-Finder/build/libraries/Adafruit_NeoPixel/esp8266.c.o"
   ],
-  "file": "/home/blues/Arduino/libraries/Adafruit_NeoPixel/kendyte_k210.c"
+  "file": "/home/blues/Arduino/libraries/Adafruit_NeoPixel/esp8266.c"
  }
 ]
