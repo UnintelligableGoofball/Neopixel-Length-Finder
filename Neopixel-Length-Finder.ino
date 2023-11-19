@@ -11,7 +11,7 @@ const byte LED_IN = (int)3;
 int state = 0;
 
 //Strip object setup:
-Adafruit_NeoPixel strip(500, LED_OUT, NEO_GRBW + NEO_KHZ800);
+Adafruit_NeoPixel strip(500, LED_OUT, NEO_GRB + NEO_KHZ800);
 void setup()
 {
     strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
